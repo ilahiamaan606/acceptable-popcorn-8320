@@ -1,3 +1,4 @@
+let mydata;
 let container = document.getElementById("listedproduct");
 let cartdata=JSON.parse(localStorage.getItem("cart_data")) || [];
 let cartdetail=JSON.parse(localStorage.getItem("cartdetail")) || [];
@@ -15,7 +16,8 @@ async function fetching() {
         let res = await fetch("https://busy-cyan-cheetah-garb.cyclic.app/product/boy", { method: "GET", });
         data = await res.json()
         rendercard(data);
-        sortedData(data)
+        sortedData(data);
+        mydata=data;
     } catch (error) {
         console.log(error)
     }
@@ -98,6 +100,8 @@ function rendercard(data) {
         container.append(card);
     });
 }
+//In sortedData ,every time the value changes, the addeventlistener fires, while pricefilter doesn't have 
+//an eventlistener to fire everytime.
 
 function sortedData(data){
     sorted_value.addEventListener("change",function(){
@@ -118,3 +122,62 @@ function sortedData(data){
         
       }) 
 }
+
+collap()
+
+function collap(){
+    let coll = document.getElementsByClassName("collapsible");
+    var i;
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+        content.style.maxHeight = null;
+        } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        } 
+    });
+    }
+}
+
+function pricefilter(){
+    let cb=document.querySelectorAll("#pricefilter")
+    for(let i=0;i<cb.length;i++){
+      if(cb[i].defaultValue=="0to20" && cb[i].checked== true){
+        let newdata1=mydata.filter((element,index)=>{
+            if(element.price<=20){
+                return element;
+            }
+            
+        });
+        rendercard(newdata1);
+        sortedData(newdata1)
+        break;
+      }else if(cb[i].defaultValue=="20to30" && cb[i].checked== true){
+        let newdata2=mydata.filter((element,index)=>{
+            if(element.price>20 && element.price<=30){
+                return element;
+            }
+            
+        });
+        rendercard(newdata2);
+        sortedData(newdata2)
+        break;
+      }else if(cb[i].defaultValue=="30above" && cb[i].checked== true){
+        let newdata1=mydata.filter((element,index)=>{
+            if(element.price>30){
+                return element;
+            }
+            
+        });
+        rendercard(newdata1);
+        sortedData(newdata1)
+        break;
+      }else{
+        continue;
+      }
+    }
+    // console.log(mydata)
+    
+  }

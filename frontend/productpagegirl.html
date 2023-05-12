@@ -134,21 +134,22 @@
         <div id="main">
             
             <div id="filterdiv">
-                <h3 class="collapsible">
+                <!-- <h3 class="collapsible">
                     Brand
                 </h3>
                 <div class="content">
                     <button class="catagory" id="filter_by_brand" value="Carter">Carter</button>
                     <button class="catagory" id="filter_by_brand" value="Doorbuster">Doorbuster</button>
-                </div>
+                </div> -->
                 <h3 class="collapsible">
                     Price
                 </h3>
                 <div class="content">
 
-                        <div class="catagory"><input type="radio" id="sortby" onclick="sortdata()" name="prise" value="asc"> Low to High</div>
-                        <div class="catagory"><input type="radio" id="sortby" onclick="sortdata()" name="prise" value="desc">High to Low </div>
-
+                    <div class="catagory"><input type="radio" id="pricefilter" onclick="pricefilter()" name="prise" value="0to20">0$ - 20$</div>
+                    <div class="catagory"><input type="radio" id="pricefilter" onclick="pricefilter()" name="prise" value="20to30">20$ - 30$</div>
+                    <div class="catagory"><input type="radio" id="pricefilter" onclick="pricefilter()" name="prise" value="30above">Greater than 30$ </div>
+                    
                 </div>
                 <h3 class="collapsible">
                     Color
