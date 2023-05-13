@@ -181,3 +181,20 @@ function pricefilter(){
     // console.log(mydata)
     
   }
+
+
+  //Burger menu
+
+document.addEventListener("DOMContentLoaded", function() {
+    var hamBurger = document.getElementById("ham-burger");
+    var menuBar = document.querySelector(".menu-bar");
+    hamBurger.addEventListener("click", function() {
+      if (menuBar.style.display === "block") {
+        menuBar.style.display = "none";
+      } else {
+        menuBar.style.display = "block";
+      }
+    });
+  });
+  
+  
