@@ -20,10 +20,10 @@ registerform.addEventListener("submit", (e) => {
         name: registerform.name.value,
         email: registerform.email.value,
         pass: registerform.pass.value,
-        // cpassword: registerform.pass.value
+        cpassword: registerform.cpass.value
     }
     // console.log(obj)
-    if (obj.password == obj.cpassword) {
+    if (obj.pass == obj.cpassword && obj.pass.length>6) {
 
         fetch("https://itchy-plum-sheep.cyclic.app/users/signup",
             {
@@ -41,7 +41,7 @@ registerform.addEventListener("submit", (e) => {
             })
     }
     else {
-        alert("Confirm Password is different.")
+        alert(" Password must be at least 6 characters long or the password enterd in confirm password does not match")
     }
 
 
@@ -60,7 +60,7 @@ loginform.addEventListener("submit", (e) => {
         pass: loginform.pass.value,
     }
 
-    fetch("http://localhost:8080/users/login",
+    fetch("https://itchy-plum-sheep.cyclic.app/users/login",
         {
             method: "POST",
             headers: { "Content-Type": "application/json" },

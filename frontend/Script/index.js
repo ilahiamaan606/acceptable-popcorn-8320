@@ -1,6 +1,12 @@
 let username1 = document.getElementById("user-name")
 
+let username = document.getElementById("username")
+
 let myname1 = localStorage.getItem("name");
+
+if (myname1) {
+  username.innerHTML = myname1
+}
 
 if (myname1) {
   username1.innerHTML = myname1
@@ -26,7 +32,7 @@ if (username1.innerText == "Logout") {
 
     e.preventDefault()
 
-    const response = await fetch('http://localhost:8080/users/logout', {
+    const response = await fetch('https://itchy-plum-sheep.cyclic.app/users/logout', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -46,6 +52,8 @@ if (username1.innerText == "Logout") {
   })
 
 }
+
+
 if (username1.innerText == "Sign In") {
 
   username1.setAttribute("href", "signup.html");
