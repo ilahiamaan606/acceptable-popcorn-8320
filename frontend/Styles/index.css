@@ -624,36 +624,36 @@
     width: 100%;
     background-color: #fff;
     z-index: 1;
-  }
-  
-  .menu-bar ul {
+}
+
+.menu-bar ul {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .menu-bar li {
+}
+
+.menu-bar li {
     margin-bottom: 10px;
-  }
-  
-  .menu-bar a {
+}
+
+.menu-bar a {
     display: block;
     padding: 5px;
     text-decoration: none;
     color: #000;
     font-weight: bold;
-  }
-  
-  .res-bar {
+}
+
+.res-bar {
     position: relative;
     z-index: 2;
-  }
+}
 
-  #ham-burger {
+#ham-burger {
     cursor: pointer;
-  }
-  
-  
+}
+
+
 
 
 @media (min-width:600px) and (max-width:950px) {
@@ -684,7 +684,11 @@
         font-weight: bold;
     }
 
-    .header-top {
+    /* .header-top {
+        display: none;
+    } */
+
+    .top-left {
         display: none;
     }
 
@@ -774,20 +778,20 @@
     #last_h1 {
         width: 100%;
     }
-    
+
     #last_h1 :nth-child(1) {
         font-size: 100%;
-    
+
     }
-    
+
     #last_h1 :nth-child(2) {
         font-size: 100%;
-    
+
     }
-    
+
     #last_h1 :nth-child(3) {
         font-size: 100%;
-    
+
     }
 }
 
@@ -820,9 +824,23 @@
         font-weight: bold;
     }
 
-    .header-top {
+    /* .header-top {
+        display: none;
+    } */
+
+    .top-left {
         display: none;
     }
+
+    .header-top>.top-middle {
+        display: none;
+    }
+
+    .header-top {
+        justify-content: center;
+    }
+
+
 
     .banner_text2 :nth-child(1) {
         font-size: 90%;
@@ -910,19 +928,19 @@
     #last_h1 {
         width: 100%;
     }
-    
+
     #last_h1 :nth-child(1) {
         font-size: 60%;
-    
+
     }
-    
+
     #last_h1 :nth-child(2) {
         font-size: 60%;
-    
+
     }
-    
+
     #last_h1 :nth-child(3) {
         font-size: 60%;
-    
+
     }
 }

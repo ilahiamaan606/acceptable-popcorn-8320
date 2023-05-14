@@ -621,8 +621,12 @@ a img {
     align-items:;
   } */
 
-  .top-middle{
-    display: none;
+  .header-top>.top-middle {
+    display:none;
+  }
+
+  .header-top {
+    justify-content: center;
   }
 
 
@@ -734,43 +738,51 @@ a img {
   #listedproduct {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .collapsible{
+    font-size: 16px;
+  }
 }
 
 
 @media (max-width:600px) {
   .banner_text h1 {
-      font-size: 100%;
+      font-size: 200%;
   }
 
   .banner_text :nth-child(2) {
-      font-size: 100%;
+      font-size: 170%;
       font-weight: bold;
       font-style: italic;
   }
 
   .banner_text :nth-child(3) {
-      font-size: 120%;
+      font-size: 220%;
       font-weight: bold;
 
   }
 
   .banner_text :nth-child(4) {
-      font-size: 120%;
+      font-size: 220%;
       font-weight: bold;
 
   }
 
   .banner_text p {
-      font-size: 15px;
+      font-size: 30px;
       font-weight: bold;
   }
 
   /* .header-top {
-      display: none;
+    align-items:;
   } */
 
-  .top-middle{
-    display: none;
+  .header-top>.top-middle {
+    display:none;
+  }
+
+  .header-top {
+    justify-content: center;
   }
 
 
@@ -779,45 +791,45 @@ a img {
   }
 
   .banner_text2 :nth-child(1) {
-      font-size: 90%;
+      font-size: 150%;
   }
 
   .banner_text2 :nth-child(2) {
-      font-size: 7px;
+      font-size: 11px;
   }
 
   .btn button {
-      font-size: 7px;
+      font-size: 10px;
   }
 
   .main-screen .btn ul li button {
-      font-size: 7px;
+      font-size: 10px;
   }
 
   .Chilly h1 {
-      font-size: 18px;
+      font-size: 30px;
   }
 
   #three_img {
-      height: 200px;
+      height: 300px;
   }
 
   #circle img {
-      height: 70px;
+      height: 130px;
 
   }
 
   #paper_img img {
-      height: 80px;
+      height: 150px;
   }
 
   .big2 img {
 
-      height: 200px;
+      height: 300px;
   }
 
   .banner_text4 p {
-      font-size: 100%;
+      font-size: 200%;
   }
 
   .SHOP_h1 {
@@ -826,7 +838,7 @@ a img {
 
   .header-bottom>.bottom-left>a>img {
       padding-top: 10px;
-      width: 70px;
+      width: 100px;
   }
 
   #footer {
@@ -841,7 +853,7 @@ a img {
       width:80%
   } */
   #container_1 u {
-      font-size: 6px;
+      font-size: 10px;
   }
 
   .bottom-middle {
@@ -866,20 +878,24 @@ a img {
   }
   
   #last_h1 :nth-child(1) {
-      font-size: 60%;
+      font-size: 100%;
   
   }
   
   #last_h1 :nth-child(2) {
-      font-size: 60%;
+      font-size: 100%;
   
   }
   
   #last_h1 :nth-child(3) {
-      font-size: 60%;
+      font-size: 100%;
   
   }
   #listedproduct {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .collapsible{
+    font-size: 16px;
   }
 }
