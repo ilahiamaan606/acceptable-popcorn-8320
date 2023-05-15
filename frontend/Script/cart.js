@@ -36,7 +36,7 @@ if (username1.innerText == "Logout") {
   
       e.preventDefault()
   
-      const response = await fetch('https://itchy-plum-sheep.cyclic.app/users/logout', {
+      const response = await fetch('https://dull-rose-spider-cuff.cyclic.app/users/logout', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`

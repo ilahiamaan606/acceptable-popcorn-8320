@@ -8,6 +8,7 @@ let username1 = document.getElementById("user-name")
 let username = document.getElementById("username")
 
 let myname1 = localStorage.getItem("name");
+console.log(myname1)
 
 if (myname1) {
   username.innerHTML = myname1
@@ -37,7 +38,7 @@ if (username1.innerText == "Logout") {
 
     e.preventDefault()
 
-    const response = await fetch('https://itchy-plum-sheep.cyclic.app/users/logout', {
+    const response = await fetch('https://dull-rose-spider-cuff.cyclic.app/users/logout', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -73,7 +74,7 @@ if (username1.innerText == "Sign In") {
 async function getorders(){
 
     try {
-        let res = await fetch("https://busy-cyan-cheetah-garb.cyclic.app/order");
+        let res = await fetch("https://dull-rose-spider-cuff.cyclic.app/order");
         data = await res.json()
         console.log(data)
 

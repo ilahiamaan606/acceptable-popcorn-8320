@@ -34,7 +34,7 @@ if (username1.innerText == "Logout") {
   
       e.preventDefault()
   
-      const response = await fetch('https://itchy-plum-sheep.cyclic.app/users/logout', {
+      const response = await fetch('https://dull-rose-spider-cuff.cyclic.app/users/logout', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -64,7 +64,7 @@ if (username1.innerText == "Logout") {
 
 async function fetching() {
     try {
-        let res = await fetch("https://busy-cyan-cheetah-garb.cyclic.app/product/girl", { method: "GET", });
+        let res = await fetch("https://dull-rose-spider-cuff.cyclic.app/product/girl", { method: "GET", });
         data = await res.json()
         rendercard(data);
         sortedData(data);

@@ -25,7 +25,7 @@ registerform.addEventListener("submit", (e) => {
     // console.log(obj)
     if (obj.pass == obj.cpassword && obj.pass.length>6) {
 
-        fetch("https://itchy-plum-sheep.cyclic.app/users/signup",
+        fetch("https://dull-rose-spider-cuff.cyclic.app/users/signup",
             {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -60,7 +60,7 @@ loginform.addEventListener("submit", (e) => {
         pass: loginform.pass.value,
     }
 
-    fetch("https://itchy-plum-sheep.cyclic.app/users/login",
+    fetch("https://dull-rose-spider-cuff.cyclic.app/users/login",
         {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -69,6 +69,7 @@ loginform.addEventListener("submit", (e) => {
         .then(res => res.json())
         .then((res) => {
             alert(res.msg)
+            console.log(res.msg)
             if(res.token){
                 localStorage.setItem("token",res.token)
                 localStorage.setItem("name",res.name)
