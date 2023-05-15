@@ -28,59 +28,65 @@
     <hr />
     <div id="part2">
       <div id="part21">
-        <div id="form">
-          <div class="head">CONTACT DETAILS</div>
-          <div id="names">
-            <input id="name" type="text" placeholder="Name*" />
-          </div>
-          <div id="mobileno">
-            <input id="mobile" type="text" placeholder="Mobile No*" />
-          </div>
-          <div class="head">ADDRESS</div>
-          <div id="pincode">
-            <input id="pin" type="number" placeholder="Pin Code*" />
-          </div>
-          <div id="address">
-            <input
-              id="house"
-              type="text"
-              placeholder="Address(House No, Building, Sreet, Area)*"
-            />
-          </div>
-          <div id="locality">
-            <input id="local" type="text" placeholder="Locality / Town*" />
-          </div>
-          <div id="CITY">
-            <div id="city">
+        <form  id="addressform">
+
+        
+            <div class="head">CONTACT DETAILS</div>
+            <div id="names">
+              <input id="name" type="text" placeholder="Name*" required />
+            </div>
+            <div id="mobileno">
+              <input id="mobile" type="number" placeholder="Mobile No*" required />
+            </div>
+            <div class="head">ADDRESS</div>
+            <div id="pincode">
+              <input id="pin" type="number" placeholder="Pin Code*" required />
+            </div>
+            <div id="address">
               <input
-                id="incity"
+                id="house"
                 type="text"
-                placeholder="City / District*"
-                style="margin-right: 30px; width: 80%"
+                placeholder="Address(House No, Building, Sreet, Area)*" required
               />
             </div>
-            <div id="state">
-              <input
-                id="instate"
-                type="text"
-                placeholder="State*"
-                style="margin-left: 30px; width: 80%"
-              />
+            <div id="locality">
+              <input id="local" type="text" placeholder="Locality / Town*"  required />
             </div>
-          </div>
-          <div class="head">SAVE ADDRESS AS</div>
-          <div id="as">
-            <div id="home">Home</div>
-            <div id="work">Work</div>
-          </div>
-          <div id="default">
-            <input id="checkbox" type="checkbox" />
-            <p>Make this my default address</p>
-          </div>
-          <div id="addaddress">
-            <button id="addbutton" style="cursor: pointer">ADD ADDRESS</button>
-          </div>
-        </div>
+            <div id="CITY">
+              <div id="city">
+                <input
+                  id="incity"
+                  type="text"
+                  placeholder="City / District*"
+                  style="margin-right: 30px; width: 80%" required
+                />
+              </div>
+              <div id="state">
+                <input
+                  id="instate"
+                  type="text"
+                  placeholder="State*"
+                  style="margin-left: 30px; width: 80%" required
+                />
+              </div>
+            </div>
+            <div class="head">SAVE ADDRESS AS</div>
+            <div id="as">
+              <div id="home">Home</div>
+              <div id="work">Work</div>
+            </div>
+            <div id="default">
+              <input id="checkbox" type="checkbox"  />
+              <p>Make this my default address</p>
+            </div>
+
+            <input type="submit" id="submit" value="Add Address">
+            <!-- <div id="addaddress">
+              <button id="addbutton" style="cursor: pointer">ADD ADDRESS</button>
+            </div> -->
+          
+        </form>
+
       </div>
 
       <div id="part22">
