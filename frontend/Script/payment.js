@@ -38,7 +38,7 @@ async function payment(event) {
 
     }
 
-    let res = await fetch("http://localhost:8080/payment/pay", {
+    let res = await fetch("https://itchy-plum-sheep.cyclic.app/payment/pay", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -66,7 +66,7 @@ async function payment(event) {
 
 async function ordercreate(obj) {
 
-    let res = await fetch("http://localhost:8080/order/create", {
+    let res = await fetch("https://itchy-plum-sheep.cyclic.app/order/create", {
         method: "POST",
         headers: { "Content-Type": "application/json", "token": localStorage.getItem("token") },
         body: JSON.stringify(obj)
